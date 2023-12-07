@@ -1,0 +1,18 @@
+server:
+  port: ${RAPIDUS_SERVER_PORT}
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://${RAPIDUS_MARIADB_HOST}:${RAPIDUS_MARIADB_PORT}/${RAPIDUS_DATA_BASE_NAME}?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: ${RAPIDUS_MARIADB_USER_NAME}
+    password: ${RAPIDUS_MARIADB_USER_PASSWORD}
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show_sql: true
+    format_sql: true
+
+file:
+  upload-dir: src/main/resources/static
