@@ -7,6 +7,7 @@ import com.moa.rapidus.data.entity.Theme;
 import com.moa.rapidus.data.repository.ImageRepository;
 import com.moa.rapidus.data.repository.ThemeRepository;
 import com.moa.rapidus.service.ImageService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class ImageServiceImpl implements ImageService {
 
     @Value("${cloud.aws.s3.bucket}")
@@ -28,16 +30,9 @@ public class ImageServiceImpl implements ImageService {
 
     private final AmazonS3 amazonS3;
 
-    @Autowired
-    private ImageRepository imageRepository;
+    private final ImageRepository imageRepository;
 
-    @Autowired
-    private ThemeRepository themeRepository;
-
-    @Autowired
-    public ImageServiceImpl(AmazonS3 amazonS3) {
-        this.amazonS3 = amazonS3;
-    }
+    private final ThemeRepository themeRepository;
 
     @Override
     public Image saveImage(MultipartFile file, String theme, int type) throws IOException {
