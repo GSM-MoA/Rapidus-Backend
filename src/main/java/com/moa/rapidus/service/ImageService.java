@@ -12,15 +12,8 @@ import java.util.Optional;
 
 public interface ImageService {
     Image saveImage(MultipartFile file, String theme, int type) throws IOException;
-    Image getImage(Long id);
     Image likeImage(Long id);
     Optional<Theme> getThemeById(Long id);
     Image getTopImageByType(int type);
     List<Image> getImagesByType(int type);
-    List<Image> getImagesByTheme(String theme);
-    List<Image> getImagesByThemeAndType(String theme, int type);
-    Resource loadImageAsResource(String filePath) throws MalformedURLException;
-
-
-    void deleteImage(Long id);
 }
