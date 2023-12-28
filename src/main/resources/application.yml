@@ -10,12 +10,9 @@ spring:
   jpa:
     generate-ddl: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show_sql: true
     format_sql: true
-
-file:
-  upload-dir: src/main/resources/static
 
 cloud:
   aws:
