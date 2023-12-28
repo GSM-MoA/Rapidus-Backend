@@ -10,7 +10,7 @@ spring:
   jpa:
     generate-ddl: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: ${DB_DDL_AUTO}
     show_sql: true
 
 cloud:
