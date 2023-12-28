@@ -34,9 +34,6 @@ public class ImageServiceImpl implements ImageService {
     @Autowired
     private ThemeRepository themeRepository;
 
-    @Value("${file.upload-dir}")
-    private String uploadDir;
-
     @Autowired
     public ImageServiceImpl(AmazonS3 amazonS3) {
         this.amazonS3 = amazonS3;
