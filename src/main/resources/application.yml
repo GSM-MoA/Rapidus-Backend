@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://${RAPIDUS_MARIADB_HOST}:${RAPIDUS_MARIADB_PORT}/${RAPIDUS_DATA_BASE_NAME}?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    url: ${RAPIDUS_MARIADB_URL}
     username: ${RAPIDUS_MARIADB_USER_NAME}
     password: ${RAPIDUS_MARIADB_USER_PASSWORD}
 
