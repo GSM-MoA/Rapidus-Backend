@@ -13,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @Transactional(readOnly = true, rollbackFor = Exception.class)
 public class MostLikedServiceImpl implements MostLikedService {
-
     private final ImageRepository imageRepository;
 
     @Override

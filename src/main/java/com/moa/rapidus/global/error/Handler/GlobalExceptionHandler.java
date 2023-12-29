@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-
     private final Logger log = LoggerFactory.getLogger(this.getClass().getSimpleName());
 
     @ExceptionHandler(GlobalException.class)

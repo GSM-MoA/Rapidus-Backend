@@ -6,8 +6,7 @@ import lombok.Getter;
 
 @Getter
 public class UnknownErrorException extends GlobalException {
-
-        public UnknownErrorException() {
+    public UnknownErrorException() {
             super(ErrorCode.UNKNOWN_ERROR);
         }
 }

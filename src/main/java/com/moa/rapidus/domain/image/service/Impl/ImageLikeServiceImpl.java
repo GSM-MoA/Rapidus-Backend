@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @Transactional(rollbackFor = Exception.class)
 public class ImageLikeServiceImpl implements ImageLikeService {
-
     private final ImageRepository imageRepository;
 
     @Override

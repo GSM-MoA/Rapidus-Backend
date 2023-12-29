@@ -4,6 +4,5 @@ import com.moa.rapidus.domain.image.presentation.data.request.SaveImageRequestDT
 import org.springframework.web.multipart.MultipartFile;
 
 public interface SaveImageService {
-
     void execute(SaveImageRequestDTO saveImageRequestDTO, MultipartFile file);
 }

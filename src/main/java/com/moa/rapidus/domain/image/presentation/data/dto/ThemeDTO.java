@@ -9,7 +9,6 @@ import lombok.Getter;
 @AllArgsConstructor
 public class ThemeDTO {
     private Long id;
-
     private String enName;
     private String krName;
 }

@@ -13,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @Transactional(readOnly = true, rollbackFor = Exception.class)
 public class ThemeServiceImpl implements ThemeService {
-
     private final ThemeRepository themeRepository;
 
     @Override

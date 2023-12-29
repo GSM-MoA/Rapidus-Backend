@@ -6,7 +6,6 @@ import lombok.Getter;
 
 @Getter
 public class ThemeNotFoundException extends GlobalException {
-
     public ThemeNotFoundException() {
         super(ErrorCode.THEME_NOT_FOUND);
     }

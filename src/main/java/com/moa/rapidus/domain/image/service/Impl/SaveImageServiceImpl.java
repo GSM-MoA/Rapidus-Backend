@@ -23,7 +23,6 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @Transactional(readOnly = true, rollbackFor = Exception.class)
 public class SaveImageServiceImpl implements SaveImageService {
-
     @Value("${cloud.aws.s3.bucket}")
     private String bucket;
 

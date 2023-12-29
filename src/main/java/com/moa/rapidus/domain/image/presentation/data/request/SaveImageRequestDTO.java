@@ -9,7 +9,6 @@ import org.springframework.web.multipart.MultipartFile;
 @Builder
 @AllArgsConstructor
 public class SaveImageRequestDTO {
-
     private MultipartFile file;
 
     private String theme;

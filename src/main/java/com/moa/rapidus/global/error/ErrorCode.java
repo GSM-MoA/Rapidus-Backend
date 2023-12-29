@@ -11,8 +11,6 @@ public enum ErrorCode {
     IMAGE_NOT_FOUND("그림이 존재하지 않습니다.", 404),
     THEME_NOT_FOUND("테마를 찾을 수 없습니다.", 404);
 
-
     private final String message;
-
     private final int status;
 }

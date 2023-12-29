@@ -16,7 +16,6 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Transactional(readOnly = true, rollbackFor = Exception.class)
 public class TypeImagesServiceImpl implements TypeImagesService {
-
     private final ImageRepository imageRepository;
 
     public ListTypeImageResponseDTO execute(int type) {

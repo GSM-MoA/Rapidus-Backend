@@ -6,7 +6,6 @@ import lombok.Getter;
 
 @Getter
 public class ImageNotFoundException extends GlobalException {
-
     public ImageNotFoundException() {
         super(ErrorCode.IMAGE_NOT_FOUND);
     }
