@@ -35,8 +35,7 @@ public class SaveImageServiceImpl implements SaveImageService {
 
     @Override
     public void execute(SaveImageRequestDTO saveImageRequestDTO, MultipartFile file) {
-        String fileName = UUID.randomUUID().toString() + ".jpeg";
-        String filePath = bucket + "/images/" + fileName;
+        String filePath = UUID.randomUUID().toString() + ".jpeg";
 
         ObjectMetadata metadata = new ObjectMetadata();
 
@@ -45,7 +44,7 @@ public class SaveImageServiceImpl implements SaveImageService {
 
         try(InputStream inputStream = file.getInputStream()) {
 
-            amazonS3.putObject(new PutObjectRequest(bucket, fileName, inputStream, metadata)
+            amazonS3.putObject(new PutObjectRequest(bucket, filePath, inputStream, metadata)
                     .withCannedAcl(CannedAccessControlList.PublicRead));
 
         } catch(IOException e) {
