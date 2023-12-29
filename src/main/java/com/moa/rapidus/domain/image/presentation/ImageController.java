@@ -19,7 +19,6 @@ import java.util.List;
 @CrossOrigin
 @RequestMapping("/draw")
 @RequiredArgsConstructor
-
 public class ImageController {
     private final SaveImageService saveImageService;
 
@@ -32,9 +31,8 @@ public class ImageController {
     private final MostLikedService mostLikedService;
 
     @PostMapping("/upload")
-    public ResponseEntity<ImageDTO> uploadImage(@RequestPart(name = "data") SaveImageRequestDTO saveImageRequestDTO, @RequestPart(name = "file") MultipartFile file){
+    public void uploadImage(@RequestPart(name = "data") SaveImageRequestDTO saveImageRequestDTO, @RequestPart(name = "file") MultipartFile file){
         saveImageService.execute(saveImageRequestDTO, file);
-        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @GetMapping("/theme/{id}")
@@ -44,10 +42,9 @@ public class ImageController {
     }
 
     @GetMapping("/search/type/{type}")
-    public ResponseEntity<List<ListTypeImageResponseDTO>> searchByType(@PathVariable int type) {
+    public ResponseEntity<ListTypeImageResponseDTO> searchByType(@PathVariable int type) {
         ListTypeImageResponseDTO images = typeImagesService.execute(type);
-        List<ListTypeImageResponseDTO> responseList = Collections.singletonList(images);
-        return new ResponseEntity<>(responseList, HttpStatus.OK);
+        return new ResponseEntity<>(images, HttpStatus.OK);
     }
 
     @PatchMapping("/like/{id}")
