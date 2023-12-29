@@ -1,4 +1,4 @@
-package com.moa.rapidus.data.entity;
+package com.moa.rapidus.domain.image.domain.entity;
 
 import lombok.*;
 
@@ -14,7 +14,11 @@ public class Image {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String filePath;
-    private Integer likes;
+    private int likes;
     private String theme;
-    private Integer type;
+    private int type;
+
+    public void like(){
+        likes+=1;
+    }
 }
