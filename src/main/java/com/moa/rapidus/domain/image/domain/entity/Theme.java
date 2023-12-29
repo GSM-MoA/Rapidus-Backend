@@ -1,4 +1,4 @@
-package com.moa.rapidus.data.entity;
+package com.moa.rapidus.domain.image.domain.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,7 +19,6 @@ public class Theme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String enName;
     private String krName;
 }
